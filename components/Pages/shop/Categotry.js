@@ -81,7 +81,7 @@ const Category = () => {
                     renderItem={({ item }) =>
                         <TouchableOpacity key={item.id} style={styles.elementContainer} onPress={()=>navigation.navigate("ItemsList",{title:item.title,title_en:item.title})} >
                             <Image
-                                style={[{ width: width / 5,height:width / 5,borderWidth:2}, { resizeMode: "contain" }]}
+                                style={[{ width: width / 5,height:width / 5}, { resizeMode: "contain" }]}
                                 source={item.image?{uri:item.image}:require('../../assets/MyImages/it1.png')}
                             />
                             <Text style={[{textAlign:"center",width: width / 5}]} >

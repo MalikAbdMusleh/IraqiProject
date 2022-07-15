@@ -32,11 +32,11 @@ const Home = () => {
     return (
 
         <ScrollView style={styles.container}>
-            {/* <StatusBar 
+            <StatusBar 
             translucent
              barStyle="light-content" 
             backgroundColor="#FF4956"
-             /> */}
+             /> 
             <Header />
             <View style={styles.inputContainer} >
                 <Icon

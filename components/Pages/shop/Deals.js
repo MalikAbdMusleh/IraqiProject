@@ -99,7 +99,7 @@ const Deals = () => {
                             <LinearGradient colors={['#FEB3B3', '#fff']}  style={{borderRadius:12}}>
 
                                 <Image
-                                style={[{ width: width / 4,height: width / 4,borderWidth:2}, { resizeMode: "contain" }]}
+                                style={[{ width: width / 4,height: width / 4}, { resizeMode: "contain" }]}
                                     source={item.image?{uri:item.image}:require('../../assets/MyImages/it1.png')}
                                 />
                                 <Text style={[styles.title,{width: width / 4,}]}>

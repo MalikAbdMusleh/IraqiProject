@@ -2,10 +2,7 @@ import React, { Component,useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
 import FormData from'form-data';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import  Ionicons from 'react-native-vector-icons/Ionicons';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import * as ImagePicker from "react-native-image-picker"
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 
 import {

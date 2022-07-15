@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { View, Text, Button, useWindowDimensions, TouchableOpacity ,StyleSheet,Image} from 'react-native';
 import { NavigationContainer ,useNavigation} from '@react-navigation/native';
+import { StatusBar } from 'expo-status-bar';
+
 import {
   createDrawerNavigator,
   DrawerContentScrollView,
@@ -51,13 +53,14 @@ function CustomDrawerContent(props) {
           getData();
       },[])
   return (
-    <DrawerContentScrollView {...props} style={{  marginTop: -4 }}>
-      <View style={{ width: width / 1.4, height: height / 5, backgroundColor: "#FF4956" }}>
-      <View style={[styles.listContainer]} >
+    <DrawerContentScrollView {...props} style={{  marginTop: '-20%' }}>
+ 
+      <View style={{ width: "100%", height: height / 5, backgroundColor: "#FF4956" ,justifyContent:"center"}}>
+      {/* <View style={[styles.listContainer,{borderWidth:2}]} > */}
 
-<TouchableOpacity style={[styles.elementContainer, { justifyContent: "flex-start", height: height / 9, width: width / 1.13}]} >
+<TouchableOpacity style={[styles.elementContainer, { justifyContent: "center", height: height / 9, width: width / 1.13}]} >
 
-    <View style={{ flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "flex-start" }}>
+    <View style={{ flexDirection: "row", justifyContent: "flex-start" }}>
 
         <View style={{ flex:.6 , flexDirection: "row", alignItems: "flex-start", justifyContent: "flex-start"  }}>
 
@@ -86,7 +89,7 @@ function CustomDrawerContent(props) {
     </View>
 </TouchableOpacity>
 
-</View>
+{/* </View> */}
       </View>
       <DrawerItemList {...props} />
       <View style={{ flexDirection: "row", position: "relative", bottom: "-60%", height: height / 2, marginLeft: "5%" }}>
