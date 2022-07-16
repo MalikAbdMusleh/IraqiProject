@@ -18,7 +18,9 @@ import {
     VirtualizedList
 } from "react-native";
 import { useNavigation } from '@react-navigation/native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
+Ionicons.loadFont().then();
 import {
     Icon
 } from "react-native-elements";
@@ -124,13 +126,12 @@ React.useEffect(()=>{
                                                 <Text style={[styles.price, { marginHorizontal: 1 }]}>
                                                     {item.rating.toFixed(2)}
                                                 </Text>
-                                                <Icon
-                                                    name='star'
-                                                    type='font-awesome'
-                                                    size={15}
-                                                    color='#E6EE0E'
-                                                    onPress={() => console.log('hello')}
-                                                />
+                                                              <Ionicons
+           name='star'
+           size={15}
+           color={"#E6EE0E"}
+           onPress={()=>chooseFile()}
+         />
                                             </View>
                                         </View>
                                         {/* </View> */}

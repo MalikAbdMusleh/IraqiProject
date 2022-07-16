@@ -39,7 +39,7 @@ const Language = () => {
         // alert(json.number)   
         setCheckedProduct(json.lang) 
         json != null ? setUserInfo(json)  : null;
-// setIsLoading(false)
+setIsLoading(false)
     } catch(e) { 
       // error reading value
       alert(e)  

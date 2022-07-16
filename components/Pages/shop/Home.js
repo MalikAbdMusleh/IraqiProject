@@ -3,6 +3,9 @@ import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
 import { Icon } from 'react-native-elements'
 import { useNavigation } from '@react-navigation/native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+
+Ionicons.loadFont().then();
 
 import {
     StyleSheet,
@@ -24,13 +27,13 @@ import Deals from "./Deals";
 import Category from "./Categotry";
 // import Drawer from '../../stack/Drawer'
 const Home = () => {
-    const { width } = useWindowDimensions()
+    const { width,height } = useWindowDimensions()
     const navigation = useNavigation();
 
 
 
     return (
-
+<View style={{width:width,height:height/1.1}}>
         <ScrollView style={styles.container}>
             <StatusBar 
             translucent
@@ -39,13 +42,12 @@ const Home = () => {
              /> 
             <Header />
             <View style={styles.inputContainer} >
-                <Icon
-                    // raised
-                    name='search'
-                    type='font-awesome'
-                    color='#6D7177'
-                    onPress={() => console.log("e")}
-                />
+                      <Ionicons
+           name='search'
+           size={25}
+           color={"#FF4956"}
+           onPress={()=>chooseFile()}
+         />
                 <TextInput style={[styles.input2, { width: width - 120 }]} inputStyle={{ backgroundColor: '#fff' }} />
                 <TouchableOpacity  onPress={()=>navigation.navigate("Filter")}>
                     <Image source={require("../../assets/MyImages/h4.png")} />
@@ -61,8 +63,11 @@ const Home = () => {
             <FoodSupplement />
             <BabyCare />
             {/* <MyTabs/> */}
+        </ScrollView>
+        <View style={[{ backgroundColor:"#fff" ,height:height/9,position:"absolute",bottom:-height/10}]}>
             <Footer page={"home"} />
-        </ScrollView>);
+        </View>
+            </View>);
 };
 
 

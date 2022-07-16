@@ -4,7 +4,7 @@ import axios from 'axios';
 import FormData from'form-data';
 import  Ionicons from 'react-native-vector-icons/Ionicons';
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
-
+Ionicons.loadFont().then();
 import {
   StyleSheet,
   Text,

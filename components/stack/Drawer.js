@@ -14,7 +14,10 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { Icon } from 'react-native-elements'
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
+Ionicons.loadFont().then();
+// FontAwesome5.loadFont().then();
 import Help from "../Pages/drowerPages/Help&Support";
 import MyOrder from "../Pages/drowerPages/MyOrder";
 import MyProfile from "../Pages/drowerPages/MyProfile ";
